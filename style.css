@@ -37,3 +37,16 @@ main {
   display: flex;
   position: relative;
 }
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  padding-bottom: 1rem;
+}
+.question-text {
+  display: none;
+}
+.show-text .question-text {
+  display: block;
+}
