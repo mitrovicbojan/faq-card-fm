@@ -12,11 +12,28 @@
   --dark-grayish-blue: hsl(240, 6%, 50%);
   /*dividers*/
   --light-grayish-blue: hsl(240, 5%, 91%);
-}
 
-body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(
+    hsl(273, 75%, 66%) 10%,
+    hsl(240, 73%, 65%) 90%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  width: 840px;
+  height: 480px;
+  display: flex;
+  position: relative;
 }
