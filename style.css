@@ -36,10 +36,43 @@ main {
   height: 480px;
   display: flex;
   position: relative;
+  border: 2px solid red;
+  border-radius: 25px;
+  background-color: var(--light-grayish-blue);
 }
+
+.main-img {
+  width: 50%;
+  border: 2px solid green;
+}
+.main-img-container {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+.main-img-container .pattern {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: -200px;
+  left: -450px;
+}
+.img-woman {
+  position: absolute;
+  top: 80px;
+  left: -80px;
+}
+
+.main-img .box {
+  position: absolute;
+  top: 240px;
+  left: -70px;
+  width: 160px;
+  height: 150px;
+}
+
 .question-title {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   text-transform: capitalize;
   padding-bottom: 1rem;
