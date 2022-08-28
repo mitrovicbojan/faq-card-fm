@@ -71,14 +71,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid red;
 }
-
+.question {
+  border-bottom: 1px solid var(--dark-grayish-blue);
+}
 .question-text {
   display: none;
 }
 .show-text .question-text {
   display: block;
+}
+.question-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.rotate {
+  transform: rotate(180deg);
 }
 
 @media (min-width: 56rem) {
