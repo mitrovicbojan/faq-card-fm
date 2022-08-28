@@ -14,8 +14,7 @@
   --light-grayish-blue: hsl(240, 5%, 91%);
 }
 html {
-  box-sizing: initial;
-  font-size: 100%;
+  box-sizing: border-box;
 }
 *,
 *::before,
@@ -25,7 +24,7 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-  padding: 0;
+  padding: 10rem 1rem;
   background-image: linear-gradient(
     hsl(273, 75%, 66%) 10%,
     hsl(240, 73%, 65%) 90%
@@ -33,38 +32,101 @@ body {
   font-family: "Kumbh Sans", sans-serif;
 }
 .card-container {
-  display: flex;
   max-width: 56rem;
-  border-radius: 25px;
   background-color: var(--light-grayish-blue);
-  margin: 250px auto;
+  border-radius: 25px;
+  margin: 0 auto;
+  background-image: url("images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center 0%;
+  background-size: 20rem;
+}
+
+.box {
+  /*display: none;*/
+  position: absolute;
+  z-index: 1;
+  top: 80px;
 }
 .main-img {
-  flex: 1;
+  position: relative;
+}
+.main-img .woman-img {
+  position: absolute;
+  top: -8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: auto;
+  max-width: 25rem;
+  margin: auto;
+  display: block;
 }
 .questions {
-  flex: 1;
+  padding-top: 13rem;
 }
-/*
+
+/*JS for accordian*/
 .question-title {
   display: flex;
   align-items: center;
-  text-transform: capitalize;
-  padding-bottom: 1rem;
+  justify-content: space-between;
+  border-bottom: 2px solid red;
 }
+
 .question-text {
   display: none;
 }
 .show-text .question-text {
   display: block;
 }
-*/
-@media (min-width: 56em) {
-  .card-container {
-    display: flex;
+
+@media (min-width: 56rem) {
+  body {
+    padding: 5rem;
   }
+  .card-container {
+    position: relative;
+    display: flex;
+    margin: 100px auto;
+    padding-right: 2rem;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: -210% 70%;
+    height: 500px;
+  }
+  .box {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 60%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+  }
+
   .main-img,
   .questions {
     flex: 1;
+  }
+  .main-img {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .main-img .woman-img {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: translateX(-80px);
+    max-width: 25rem;
+  }
+  .questions {
+    padding-top: 0;
+  }
+  .question-title {
+  }
+  .questions {
+    padding: 3rem;
   }
 }
