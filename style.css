@@ -89,6 +89,9 @@ body {
 .rotate {
   transform: rotate(180deg);
 }
+.faq {
+  font-weight: 700;
+}
 
 @media (min-width: 56rem) {
   body {
@@ -137,5 +140,9 @@ body {
   }
   .questions {
     padding: 3rem;
+  }
+  .faq {
+    font-weight: 900;
+    font-size: 1.8rem;
   }
 }
